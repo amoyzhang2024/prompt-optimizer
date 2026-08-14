@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    base: process.env.GITHUB_ACTIONS ? '/prompt-optimizer/' : '/',
     envDir: monorepoRoot,
     plugins: [vue()],
     server: {
